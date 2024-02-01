@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
 <body>
     <div class="main-grid-container">
-        <div class="header"> Header</div>
+        <div class="header">
+            <div class="top-bar">
+                <img src="images/magnify.svg" alt="looking glass" width="32px" height="32px">
+                <input type="text" class="searchbar">
+                <img src="images/bell.svg" alt="bell" width="32px" height="32px">
+                <div class="profile-picture-small inline"></div>
+                <h3 class="font-size-32 inline">Username</h3>
+            </div>
+            <div class="navbar">
+                <div class="profile-picture-big inline"></div>
+                <div class="welcome-message inline">
+                    <p>Hi there,</p>
+                    <h3>Username</h3>
+                </div>
+                <button class="navigation-button">New</button>
+                <button class="navigation-button">Upload</button>
+                <button class="navigation-button">Share</button>
+            </div>
+        </div>
         <div class="sidebar">
-            <div class="logo-container">Logo</div>
+            <div class="logo-container"><h1>Dashboard</h1></div>
             <div class="sidebar-button margin-top-medium">Home</div>
             <div class="sidebar-button">Profile</div>
             <div class="sidebar-button">Messages</div>
