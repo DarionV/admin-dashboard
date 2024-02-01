@@ -2,12 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
 body {
     color: var(--white);
+    font-family: 'Roboto', sans-serif;
 }
 
 :root{
@@ -80,6 +80,10 @@ body {
     grid-auto-rows: min-content;
 }
 
+.sidebar :nth-child(2) div{
+    color: var(--accent-color);
+}
+
 .sidebar>div{
     display: grid;
     grid-auto-flow: column;
@@ -103,6 +107,24 @@ body {
     justify-items: center;
     gap: 15px;
     padding-top: 14px;
+    font-size: 1rem;
+}
+
+.content-sidebar>h3{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.content-sidebar>div{
+    font-size: 0.9rem;
+}
+
+.content-sidebar>div h3{
+    margin-bottom: -18px;
+}
+
+.content-sidebar div{
+    border-radius: 10px;
 }
 
 .projects-container{
@@ -225,8 +247,8 @@ h1{
     justify-content: end;
     align-items: center;
     gap: 20px;
-    padding-right: 36px;
-    padding-bottom: 42px;
+    padding-right: 20px;
+    padding-bottom: 36px;
 }
 
 .color-stripe{
@@ -235,7 +257,26 @@ h1{
 }
 
 .announcements-container, .trending-container{
-    height: 200px;
+    height: 240px;
     width: 80%;
     background-color: var(--light-grey);
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 10px;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.announcement-item{
+    height: 100%;
+    padding: 6px;
+}
+
+.announcements-container :not(:last-child):after{
+    content: " ";
+    display: inline-block;
+    margin-bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(144, 144, 144);
 }
