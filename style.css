@@ -11,11 +11,12 @@ body {
 }
 
 :root{
-    --dark-grey: #18181b;
+    --dark-grey: hsl(240, 6%, 13%);
     --medium-grey: #27272a;
     --grey: #464646;
     --light-grey: #52525b;
     --white: #d4d4d8;
+    --text-color: rgb(207, 207, 207);
     --card-color: hsl(240, 4%, 22%);
     --accent-color: #c57b4a;
     --sidebar-color: hsl(25, 5%, 35%);
@@ -28,6 +29,10 @@ body {
     grid-template-columns: 190px 1fr;
     grid-template-rows: 130px 1fr;
     height: 100vh;
+}
+
+p{
+    color: var(--text-color);
 }
 
 .header{
@@ -98,7 +103,7 @@ body {
 .content{
     background-color: var(--dark-grey);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.3fr 1fr;
 }
 
 .content-sidebar {
@@ -108,11 +113,14 @@ body {
     gap: 15px;
     padding-top: 14px;
     font-size: 1rem;
+    padding: 14px 24px;
+    min-width: 250px;
 }
 
 .content-sidebar>h3{
     font-weight: 400;
     font-size: 1rem;
+    justify-self: left;
 }
 
 .content-sidebar>div{
@@ -120,10 +128,10 @@ body {
 }
 
 .content-sidebar>div h3{
-    margin-bottom: -18px;
+    /* margin-bottom: -18px; */
 }
 
-.content-sidebar div{
+.content-sidebar>div{
     border-radius: 10px;
 }
 
@@ -216,13 +224,14 @@ h1{
 
 .project-card{
     width: 100%;
-    height: 150px;
+    /* height: 150px; */
     background-color: var(--card-color);
     border-radius: 10px;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 7px auto;
     font-size: 0.9rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.254);
 }
 
 .project-card  p{
@@ -235,7 +244,7 @@ h1{
 
 .project-card>div{
     display: grid;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 .project-card>div>:first-child{
     padding: 12px;
@@ -246,9 +255,7 @@ h1{
     justify-items: center;
     justify-content: end;
     align-items: center;
-    gap: 20px;
     padding-right: 20px;
-    padding-bottom: 36px;
 }
 
 .color-stripe{
@@ -258,25 +265,31 @@ h1{
 
 .announcements-container, .trending-container{
     height: 240px;
-    width: 80%;
+    width: 100%;
     background-color: var(--light-grey);
     display: grid;
     grid-auto-rows: min-content;
     gap: 10px;
     overflow: scroll;
-    padding: 10px;
+    padding: 18px;
+    
 }
 
 .announcement-item{
     height: 100%;
-    padding: 6px;
 }
 
-.announcements-container :not(:last-child):after{
+.announcements-container>:not(:last-child):after{
     content: " ";
     display: inline-block;
-    margin-bottom: -10px;
     width: 100%;
     height: 1px;
     background-color: rgb(144, 144, 144);
+}
+
+.trending-container>div{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap:18px;
 }
