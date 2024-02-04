@@ -27,7 +27,7 @@ body {
 .main-grid-container {
     display: grid;
     grid-template-columns: 190px 1fr;
-    grid-template-rows: 130px 1fr;
+    grid-template-rows: 136px 1fr;
     height: 100vh;
 }
 
@@ -62,6 +62,7 @@ p{
     justify-items: left;
     align-items: center;
     padding-top: 18px;
+    padding-bottom: 6px;
     font-size: 0.9rem;
     font-weight: 400;
 }
@@ -127,10 +128,6 @@ p{
     font-size: 0.9rem;
 }
 
-.content-sidebar>div h3{
-    /* margin-bottom: -18px; */
-}
-
 .content-sidebar>div{
     border-radius: 10px;
 }
@@ -139,11 +136,11 @@ p{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: min-content;
-    /* grid-template-columns: min(200px 1fr) min(200px 1fr); */
     gap: 15px;
-    padding: 15px;
+    padding: 15px 0px;
     overflow: scroll;
     max-height: 600px;
+    margin-left: 20px;
 }
 
 .grid-header{
@@ -157,7 +154,7 @@ p{
     color: var(--white);
 }
 
-.sidebar>:nth-child(n+2):hover{
+.sidebar>:nth-child(n+2):not(:nth-last-child(2)):hover{
     background-color: #b17147;
     cursor: pointer;
 }
@@ -173,14 +170,14 @@ h1{
 .profile-picture-small{
     width: var(--profile-picture-size-small);
     height: var(--profile-picture-size-small);
-    background-color: var(--accent-color);
+    background-color:rgb(211, 137, 100);
     border-radius: 100px;
 }
 
 .profile-picture-big{
     width: var(--profile-picture-size-big);
     height: var(--profile-picture-size-big);
-    background-color: var(--accent-color);
+    background-color: rgb(211, 137, 100);
     border-radius: 100px;
 }
 
@@ -265,12 +262,18 @@ h1{
 .announcements-container, .trending-container{
     height: 240px;
     width: 100%;
-    background-color: var(--light-grey);
+    background-color: var(--grey);
+    border: 2px solid var(--light-grey);
     display: grid;
     grid-auto-rows: min-content;
     gap: 10px;
     overflow: scroll;
     padding: 18px;
+}
+
+.trending-container{
+    height: min-content;
+    max-height: 240px;
 }
 
 .announcement-item{
@@ -295,7 +298,7 @@ h1{
 .time-stamp{
     font-size: 0.9em;
     font-style: italic;
-    color: #202020;
+    color: #9d9d9d;
     margin-top: 8px;
     text-align: right;
     padding-right: 6px;
