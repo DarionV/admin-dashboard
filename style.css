@@ -166,6 +166,7 @@ h1{
     background: url(images/profile.webp);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .profile-picture-small{
     width: var(--profile-picture-size-small);
