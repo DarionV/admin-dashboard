@@ -1,4 +1,4 @@
-# The Odin Project - Calculator
+# The Odin Project - Admin dashboard
 
 This is an assignment from The Odin Project. The goal was to practice creating layout with CSS grid. 
 
