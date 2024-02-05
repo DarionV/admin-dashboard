@@ -109,6 +109,7 @@ p{
 
 .content-sidebar {
     display: grid;
+    grid-template-rows: 20px 1fr 20px min-content;
     grid-auto-rows: min-content;
     justify-items: center;
     gap: 15px;
@@ -261,7 +262,6 @@ h1{
 }
 
 .announcements-container, .trending-container{
-    height: 240px;
     width: 100%;
     background-color: var(--grey);
     border: 2px solid var(--light-grey);
@@ -272,9 +272,14 @@ h1{
     padding: 18px;
 }
 
+.announcements-container{
+    height: 100%;
+}
+
 .trending-container{
-    height: min-content;
-    max-height: 240px;
+    /* height: min-content;
+    max-height: 240px; */
+    height: 100%;
 }
 
 .announcement-item{
